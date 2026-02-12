@@ -1,0 +1,46 @@
+package product_test_JPA;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import com.prac.Product;
+import com.prac.ProductDao;
+
+public class ProductTest {
+
+    static EntityManagerFactory emf;
+
+    @BeforeAll
+    static void initEmf() {
+        emf = Persistence.createEntityManagerFactory("postgres");
+    }
+
+    @Test
+    public void insert() {
+        ProductDao dao = new ProductDao();
+
+        Product product = new Product();
+        product.setId(2);
+        product.setName("Pencil");
+        product.setPrice(5);
+
+        dao.insertProduct(product);
+
+        Product saved = dao.findProduct(2);
+        assertNotNull(saved);
+        System.out.println("Product Inserted");
+    }
+
+    @Test
+    public void findById() {
+        ProductDao dao = new ProductDao();
+        Product p = dao.findProduct(2);
+        assertNotNull(p);
+        System.out.println("Product Found");
+    }
+}

@@ -1,0 +1,39 @@
+package person_JPA;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class ProductDao {
+
+    EntityManagerFactory emf =
+            Persistence.createEntityManagerFactory("postgres");
+
+    EntityManager em = emf.createEntityManager();
+
+    // ✅ INSERT Product
+    public void insertProduct(Product p) {
+
+        EntityTransaction et = em.getTransaction();
+
+        try {
+            et.begin();
+            em.persist(p);
+            et.commit();
+
+            System.out.println("Product inserted successfully ✅");
+
+        } catch (Exception e) {
+            et.rollback();
+            System.out.println("Error inserting product ❌");
+            e.printStackTrace();
+        }
+    }
+
+    // ✅ CLOSE resources (recommended)
+    public void close() {
+        em.close();
+        emf.close();
+    }
+}

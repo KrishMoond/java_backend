@@ -1,0 +1,21 @@
+package com.prac;
+
+import javax.persistence.*;
+public class DemoFind {
+	public static void main(String args[]) {
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres"); // opeining closing
+		
+		EntityManager em= emf.createEntityManager();
+		EntityTransaction et= em.getTransaction();
+		
+		Student s= em.find(Student.class, 1);
+		if(s!=null) {
+			s.setDob("12/02/2003");
+			et.begin();
+			em.merge(s);
+			et.commit();
+			emf.close();
+		}
+	}
+
+}

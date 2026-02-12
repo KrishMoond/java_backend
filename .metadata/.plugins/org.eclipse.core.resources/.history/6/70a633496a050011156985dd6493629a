@@ -1,0 +1,49 @@
+package com.prac;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import java.util.*;
+
+public class EmployeeTest {
+
+    // helper method to create employee list
+    private List<Employee> getEmployees() {
+        List<Employee> list = new ArrayList<>();
+        list.add(new Employee(1, "Krish", 25000, 21, "2024", "CSE"));
+        list.add(new Employee(2, "Rahul", 30000, 22, "2023", "IT"));
+        list.add(new Employee(3, "Aman", 28000, 20, "2022", "ECE"));
+        return list;
+    }
+
+    // 1️⃣ isEmpty assertion
+    @Test
+    public void testEmployeeListIsNotEmpty() {
+        List<Employee> empList = getEmployees();
+        assertFalse(empList.isEmpty(), "Employee list should not be empty");
+    }
+
+    @Test
+    public void testEmployeeListIsEmpty() {
+        List<Employee> empList = new ArrayList<>();
+        assertTrue(empList.isEmpty(), "Employee list should be empty");
+    }
+
+    // 2️⃣ Age > 18 for all employees
+    @Test
+    public void testEmployeeAgeAbove18() {
+        List<Employee> empList = getEmployees();
+
+        for (Employee e : empList) {
+            assertTrue(e.getAge() > 18,
+                "Employee age must be greater than 18");
+        }
+    }
+
+    // 3️⃣ Max 5 employees allowed
+    @Test
+    public void testMaxFiveEmployees() {
+        List<Employee> empList = getEmployees();
+        assertTrue(empList.size() <= 5,
+            "Employee list should not exceed 5");
+    }
+}

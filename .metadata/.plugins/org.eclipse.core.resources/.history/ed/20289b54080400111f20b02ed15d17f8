@@ -1,0 +1,11 @@
+package com.prac;
+
+public class CalcuTest {
+	public void addTest() {
+		int res=Calculator.add(10, 30);
+	}
+	
+	public void revTest() {
+		String res=Calculator.rev("KRish");
+	}
+}

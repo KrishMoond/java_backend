@@ -1,0 +1,15 @@
+package com.connectdatabase;
+import java.util.*;
+
+public class StepsToConnectDB {
+	public static void main(String[] args) {
+		// Load the driver class
+		try {
+		Class.forName("org.postgresql.Driver");
+		}
+		catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}
+		
+	}
+}

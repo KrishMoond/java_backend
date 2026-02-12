@@ -1,0 +1,14 @@
+package com.prac;
+
+import java.util.*;
+public class Calculator {
+	public static void add(int a, int b) {
+		System.out.println(a+b);
+	}
+	
+	public static void rev(String a) {
+		StringBuilder sb= new StringBuilder(a);
+		sb.reverse();
+		System.out.println(sb.toString());
+	}
+}

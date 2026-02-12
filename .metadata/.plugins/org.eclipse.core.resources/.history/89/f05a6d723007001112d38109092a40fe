@@ -1,0 +1,24 @@
+package product_test_JPA;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.prac.Cal;
+
+public class Calcu {
+	
+	@Test
+	public void divTest() {
+		Cal c= new Cal();
+		int res=c.div(10, 2);
+		assertEquals(5,res);
+	}
+	
+//	@Test
+//	public void divTestZero() {
+//		Cal c= new Cal();
+//		int res=c.div(10, 0);
+//		assertEquals(0,res);
+//	}
+}
