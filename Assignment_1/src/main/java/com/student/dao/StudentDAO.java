@@ -1,4 +1,8 @@
+package com.student.dao;
 import javax.persistence.*;
+
+import com.student.entity.Student;
+
 import java.util.List;
 
 public class StudentDAO {

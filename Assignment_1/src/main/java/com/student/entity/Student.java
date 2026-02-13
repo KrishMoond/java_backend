@@ -1,3 +1,4 @@
+package com.student.entity;
 import javax.persistence.*;
 
 @Entity
