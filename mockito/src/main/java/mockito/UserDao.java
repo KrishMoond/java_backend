@@ -2,8 +2,12 @@ package mockito;
 
 public class UserDao {
 
-    // Dummy method (will be mocked)
-    public User findById(int id) {
-        return null;
-    }
+	// dummy method
+	public User findById(int id) {
+		// db logic no
+		// em.find(User.class,1)
+		return null;
+
+	}
+
 }
