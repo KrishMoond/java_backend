@@ -1,52 +1,34 @@
 # Java Backend Projects
 
-A collection of Java projects demonstrating JDBC, JPA/Hibernate, and database operations with PostgreSQL.
+A collection of Java projects demonstrating JDBC, JPA/Hibernate, database operations, and unit testing.
 
 ## Projects Overview
 
 ### 1. Basics_Of_JDBC
-Basic Java utilities and testing examples.
-- **Calculator.java**: Math operations (add, divide, string reverse)
-- **Employee.java**: Employee entity model
-- **User.java**: Demo class for Calculator
+Basic Java utilities and JUnit testing examples.
 
 ### 2. learnjdbc
-JDBC fundamentals with PostgreSQL.
-- **StepsToConnectDB.java**: Database connection and SELECT queries
-- **EmployeeOp.java**: CRUD operations (Create, Read, Update, Delete)
+JDBC fundamentals with PostgreSQL - database connection and CRUD operations.
 
 ### 3. hibrenate_basic
-JPA/Hibernate basics with entity management.
-- **Student.java**: Student entity with percentage and DOB
-- **Employee.java**: Employee entity with salary
-- **Demo.java**: Insert student records
-- **Demofetch.java**: Fetch and delete operations
-- **DemoFind.java**: Find and update operations
+JPA/Hibernate basics - entity management, persist, find, merge, and remove operations.
 
 ### 4. Assignment_1
-Student management system with DAO pattern.
-- **Student.java**: Entity with email validation and marks constraints
-- **StudentDAO.java**: Complete CRUD operations with custom queries
-- **CreateTableDriver.java**: Auto-create database tables
+Student management system with DAO pattern, email validation, and custom queries.
 
 ### 5. product_test_JPA
-Product management system with console interface.
-- **Product.java**: Product entity (id, name, quantity, price)
-- **ProductDao.java**: DAO with CRUD operations
-- **ProductMain.java**: Interactive menu-driven application
+Product management system with interactive console menu and full CRUD operations.
 
 ### 6. one_to_one_mapping
-JPA one-to-one relationship example.
-- **Car.java**: Car entity with engine relationship
-- **Engine.java**: Engine entity
-- **User.java**: Operations for car-engine management
+JPA one-to-one relationship between Car and Engine entities.
 
 ### 7. person_JPA
-JPA query examples with JPQL.
-- **Product.java**: Product entity
-- **ProductDao.java**: Insert operations with transaction handling
-- **Demo.java**: JPQL SELECT queries with parameters
-- **UpdatePrice.java**: JPQL UPDATE queries
+JPQL query examples - SELECT with parameters and UPDATE operations.
+
+### 8. mockito
+Unit testing with Mockito framework - mocking dependencies and isolated testing.
+
+**See individual project folders for detailed README files.**
 
 ## Prerequisites
 
