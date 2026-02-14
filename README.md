@@ -28,6 +28,12 @@ JPQL query examples - SELECT with parameters and UPDATE operations.
 ### 8. mockito
 Unit testing with Mockito framework - mocking dependencies and isolated testing.
 
+### 9. hibernate-unidirectional-onetoone
+Unidirectional one-to-one mappings - Student with AadharCard and HostelRoom.
+
+### 10. mockito_assignment
+Advanced Mockito testing - price service with discount calculations and exception handling.
+
 **See individual project folders for detailed README files.**
 
 ## Prerequisites
