@@ -34,6 +34,21 @@ Unidirectional one-to-one mappings - Student with AadharCard and HostelRoom.
 ### 10. mockito_assignment
 Advanced Mockito testing - price service with discount calculations and exception handling.
 
+### 11. task_1_14_02_26
+Hospital management system - Patient, Doctor, Appointment with medical records.
+
+### 12. ecommerce_jpa
+E-commerce system - User, Profile, Orders, and Payments with multiple relationships.
+
+### 13. one_to_many
+JPA one-to-many unidirectional mapping examples.
+
+### 14. many_to_one
+JPA many-to-one relationship demonstrations.
+
+### 15. one_to_one_bidirectional
+Bidirectional one-to-one JPA mappings.
+
 **See individual project folders for detailed README files.**
 
 ## Prerequisites
