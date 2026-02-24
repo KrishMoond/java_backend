@@ -30,8 +30,4 @@ public class CustomerService {
         em.getTransaction().commit();
     }
 
-	public Customer registerCustomer(String name, String email, String phone) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
