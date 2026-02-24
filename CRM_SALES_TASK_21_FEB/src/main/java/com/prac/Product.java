@@ -1,33 +1,36 @@
 package com.prac;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Product {
-	
-	@Id
-	private long pId;
-	private String name;
-	private double productPrice;
-	
-	public long getpId() {
-		return pId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String productName;
+    private double price;
+	public Long getId() {
+		return id;
 	}
-	public void setpId(long pId) {
-		this.pId = pId;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getProductName() {
+		return productName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
-	public double getProductPrice() {
-		return productPrice;
+	public double getPrice() {
+		return price;
 	}
-	public void setProductPrice(double productPrice) {
-		this.productPrice = productPrice;
+	public void setPrice(double price) {
+		this.price = price;
 	}
-	
+    
 }
